@@ -9,14 +9,16 @@ namespace A_Loch
     internal class Kartenliste
     {
         protected List<Karte> kartenliste;
+        public Kartenliste()
+        {}
 
-        public virtual void Add()
+        public void Add(Karte neueKarte)
         {
-
+            kartenliste.Add(neueKarte);
         }
-        public virtual void Clear()
+        public void Clear()
         {
-
+            kartenliste.Clear();
         }
     }
 }

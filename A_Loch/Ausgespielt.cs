@@ -8,14 +8,6 @@ namespace A_Loch
 {
     internal class Ausgespielt : Kartenliste
     {
-        public override void Add()
-        {
-            base.Add();
-        }
-
-        public override void Clear()
-        {
-            base.Clear();
-        }
+        
     }
 }

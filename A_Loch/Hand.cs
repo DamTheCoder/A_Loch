@@ -8,14 +8,9 @@ namespace A_Loch
 {
     internal class Hand : Kartenliste
     {
-        public override void Add()
+        public void Kartenlegen(Karte gewählteKarte)
         {
-            base.Add();
-        }
-
-        public override void Clear()
-        {
-            base.Clear();
+            kartenliste.Remove(gewählteKarte);
         }
 
     }

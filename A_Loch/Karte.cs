@@ -12,9 +12,10 @@ namespace A_Loch
         private int wert;
         private string farbe;
 
-        public Karte(int wert, string farbe)
+        public Karte(int w, string f)
         {
-
+            wert = w;   
+            farbe = f; 
         }
         public void KarteZeichnen(Graphics g)
         {
