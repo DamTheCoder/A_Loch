@@ -9,9 +9,11 @@ namespace A_Loch
     public class Spielleiter
     {
 
-        List<Karte> Kartenstapel;
-        List<Spieler> Spielerliste;
-        List<Spieler> Reihenfolge;
+        List<Karte> kartenstapel;
+        List<Spieler> spielerliste;
+        List<Spieler> reihenfolge;
+        List<Hand> spielerkarten;
+        Hand anfangshand;
 
 
 
@@ -20,27 +22,43 @@ namespace A_Loch
 
         public Spielleiter()
         {
-            Kartenstapel = new List<Karte>();
-            Spielerliste = new List<Spieler>();
-            Reihenfolge = new List<Spieler>();
+            kartenstapel = new List<Karte>();
+            spielerliste = new List<Spieler>();
+            reihenfolge = new List<Spieler>();
+            spielerkarten = new List<Hand>();
+
         }
 
-        void Spielerhinzufügen(Spieler neuerSpieler)
+        void spielerhinzufügen(Spieler neuerSpieler)
         {
-
+            spielerliste.Add(new Spieler("Louise1", spielerkarten[0]));
+            spielerliste.Add(new Spieler("Louise2", spielerkarten[1]));
+            spielerliste.Add(new Spieler("Louise3", spielerkarten[2]));
+            spielerliste.Add(new Spieler(Spielername, spielerkarten[3]));
         }
 
-        private Kartengenerieren()
+        void kartengenerieren()
         {
-            return List<Karte>;
+            anfangshand = new Hand();
+            anfangshand.Add(new Karte(7, "Karo"));
+            anfangshand.Add(new Karte(8, "Karo"));
+
+
+
+
+
+
+
+
+
         }
 
-        private Kartenmischeln()
+        void kartenmischeln()
         {
-            return List<Karte>;
+            
         }
 
-        public Kartenzuteilen()
+        public kartenzuteilen()
         {
             //pro Spieler eine Liste
         }
@@ -50,17 +68,17 @@ namespace A_Loch
             return Spieler;
         }
 
-        public Reihenfolge()
+        public reihenfolge()
         {
             return List<Reihenfolge>;
         }
 
-        public Rundenende()
+        public rundenende()
         {
             return Meme;
         }
 
-        void Rangliste()
+        void rangliste()
         {
            
         }

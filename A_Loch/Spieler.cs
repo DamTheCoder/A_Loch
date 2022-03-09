@@ -26,7 +26,10 @@ namespace A_Loch
 
         public bool weiterspielen()
         {
-            return true;
+            private void btnWeiterspielen.click
+            {
+                
+            }
         }
 
         protected void gespielteKartenlöschen()
@@ -41,13 +44,35 @@ namespace A_Loch
 
         public bool hastdunochkarten()
         {
-            return true;
+            if(hand.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
         }
 
         public bool karosieben()
         {
+            for(int i = 0; i < hand.Count; i++)
+            {
+                if (hand[i].wert == 7)
+                {
+                    if (hand[i].farbe == karo)
+                    {
+                        return true;
+                    }
+                }
+                else
+                {
+                    return false
+                }
+            }
             
-            return true;
+            
         }
 
         public int status()
