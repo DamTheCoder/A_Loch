@@ -12,7 +12,7 @@ namespace A_Loch
         List<Karte> kartenstapel;
         List<Spieler> spielerliste;
         List<Spieler> reihenfolge;
-        List<Hand> hand;
+        List<Hand> spielerkarten;
         Hand anfangshand;
         string[] farbe = new string[4];
 
@@ -26,7 +26,7 @@ namespace A_Loch
             kartenstapel = new List<Karte>();
             spielerliste = new List<Spieler>();
             reihenfolge = new List<Spieler>();
-            hand = new List<Hand>();
+            spielerkarten = new List<Hand>();
             farbe[0] = "Karo";
             farbe[1] = "Herz";
             farbe[2] = "Pik";
@@ -36,10 +36,10 @@ namespace A_Loch
 
         void spielerhinzufügen(Spieler neuerSpieler)
         {
-            spielerliste.Add(new Spieler("Lousie1", hand[0]));
-            spielerliste.Add(new Spieler("Louise2", hand[1]));
-            spielerliste.Add(new Spieler("Louise3", hand[2]));
-            spielerliste.Add(new Spieler("Spielername", hand[3]));
+            spielerliste.Add(new Spieler("Lousie1", spielerkarten[0]));
+            spielerliste.Add(new Spieler("Louise2", spielerkarten[1]));
+            spielerliste.Add(new Spieler("Louise3", spielerkarten[2]));
+            spielerliste.Add(new Spieler("Spielername", spielerkarten[3]));
         }
 
         void kartengenerieren()
@@ -66,13 +66,18 @@ namespace A_Loch
 
         void kartenmischeln()
         {
+            var rnd = new Random();
+            var randomized = anfangshand.OrderBy(item => rnd.Next());
 
-            
         }
 
         public kartenzuteilen()
         {
             //pro Spieler eine Liste
+            for (int s= 0; s < 4; s++)
+            {
+                spielerkarten[] = //Listen zuteilen 
+            }
             return;
         }
 
