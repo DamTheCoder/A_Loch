@@ -34,7 +34,9 @@ namespace A_Loch
 
         }
 
-        void spielerhinzufügen(Spieler neuerSpieler)
+        
+        
+           public void spielerhinzufügen(Spieler neuerSpieler)
         {
             spielerliste.Add(new Spieler("Lousie1", spielerkarten[0]));
             spielerliste.Add(new Spieler("Louise2", spielerkarten[1]));
@@ -71,7 +73,7 @@ namespace A_Loch
 
         }
 
-        public kartenzuteilen()
+        public void kartenzuteilen()
         {
             //pro Spieler eine Liste
             for (int s= 0; s < 4; s++)
@@ -81,19 +83,19 @@ namespace A_Loch
             return;
         }
 
-        public Spieler k7Sucher()
+        public void  k7Sucher()
         {
-            return Spieler;
+           // return Spieler;
         }
 
-        public reihenfolge()
+        public void reihenfolge()
         {
-            return List<Reihenfolge>;
+            
         }
 
-        public rundenende()
+        public void rundenende()
         {
-            return Meme;
+            //return Meme;
         }
 
         void rangliste()
