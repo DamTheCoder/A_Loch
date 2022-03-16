@@ -11,6 +11,7 @@ namespace A_Loch
     {
         public int wert;
         public string farbe;
+         
 
         public Karte(int w, string f)
         {

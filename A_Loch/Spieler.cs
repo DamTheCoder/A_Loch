@@ -11,21 +11,22 @@ namespace A_Loch
     internal class Spieler
     {
         public string Name;
-        public List<Karte> hand;
+        public Hand handliste;
 
-        public Spieler(string n, List<Karte> h)
+        public Spieler(string n, Hand h1)
         {
             Name = n; //txtName: die Textbox zum Namen reinschreiben
-            hand = h; //Übernimmt Liste von Karten vom Spielleiter
+            handliste = h1; //Übernimmt Liste von Karten vom Spielleiter
         }
 
         protected void kartensortieren()
         {
-
+            
         }
 
         public bool weiterspielen()
         {
+            
             return true;
         }
             
@@ -43,7 +44,7 @@ namespace A_Loch
 
         public bool hastdunochkarten()
         {
-            if (hand.Count > 0)
+            if (handliste.Count > 0)
             {
                 return true;
             }
@@ -56,12 +57,12 @@ namespace A_Loch
 
         public bool isKarosieben()
         {
-            for (int i = 0; i < hand.Count; i++)
+            for (int i = 0; i < handliste.Count; i++)
             {
             
-                if (hand[i].wert == 7)
+                if (handliste[i].wert == 7)
                 {
-                    if (hand[i].farbe == "karo")
+                    if (handliste[i].farbe == "Karo")
                     {
                         return true;
                     }
