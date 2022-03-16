@@ -25,7 +25,6 @@ namespace A_Loch
         {
             kartenstapel = new List<Karte>();
             spielerliste = new List<Spieler>();
-            reihenfolge = new List<Spieler>();
             hand = new List<Hand>();
             farbe[0] = "Karo";
             farbe[1] = "Herz";
@@ -34,7 +33,9 @@ namespace A_Loch
 
         }
 
-        void spielerhinzufügen(Spieler neuerSpieler)
+        
+        
+           public void spielerhinzufügen(Spieler neuerSpieler)
         {
             spielerliste.Add(new Spieler("Lousie1", hand[0]));
             spielerliste.Add(new Spieler("Louise2", hand[1]));
@@ -70,25 +71,25 @@ namespace A_Loch
             
         }
 
-        public kartenzuteilen()
+        public void kartenzuteilen()
         {
             //pro Spieler eine Liste
-            return;
+            
         }
 
-        public Spieler k7Sucher()
+        public void  k7Sucher()
         {
-            return Spieler;
+           // return Spieler;
         }
 
-        public reihenfolge()
+        public void reihenfolge()
         {
-            return List<Reihenfolge>;
+            
         }
 
-        public rundenende()
+        public void rundenende()
         {
-            return Meme;
+            //return Meme;
         }
 
         void rangliste()

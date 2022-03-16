@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using A_Loch;
 
 namespace SpielleiterTest
 {
@@ -24,7 +25,7 @@ namespace SpielleiterTest
             
             
             
-            s1.kartengenerieren();
+        
 
 
 
