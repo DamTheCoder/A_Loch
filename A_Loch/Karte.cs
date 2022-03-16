@@ -9,8 +9,8 @@ namespace A_Loch
 {
     internal class Karte
     {
-        private int wert;
-        private string farbe;
+        public int wert;
+        public string farbe;
 
         /// <summary>
         /// Erstelle neue Karte mit Wert w und Farbe f

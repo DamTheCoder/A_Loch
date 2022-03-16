@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace A_Loch
 {
-   
-    
+
+
     internal class Spieler
     {
         public string Name;
         public List<Karte> hand;
 
-        public Spieler(string Name, List hand)
+        public Spieler(string n, List<Karte> h)
         {
-            Name = txtName.text; //txtName: die Textbox zum Namen reinschreiben
-            hand = hand; //Übernimmt Liste von Karten vom Spielleiter
+            Name = n; //txtName: die Textbox zum Namen reinschreiben
+            hand = h; //Übernimmt Liste von Karten vom Spielleiter
         }
 
         protected void kartensortieren()
@@ -26,11 +26,10 @@ namespace A_Loch
 
         public bool weiterspielen()
         {
-            private void btnWeiterspielen.click
-            {
-                
-            }
+            return true;
         }
+            
+    
 
         protected void gespielteKartenlöschen()
         {
@@ -44,7 +43,7 @@ namespace A_Loch
 
         public bool hastdunochkarten()
         {
-            if(hand.Count > 0)
+            if (hand.Count > 0)
             {
                 return true;
             }
@@ -52,27 +51,29 @@ namespace A_Loch
             {
                 return false;
             }
-            
+
         }
 
-        public bool karosieben()
+        public bool isKarosieben()
         {
-            for(int i = 0; i < hand.Count; i++)
+            for (int i = 0; i < hand.Count; i++)
             {
+            
                 if (hand[i].wert == 7)
                 {
-                    if (hand[i].farbe == karo)
+                    if (hand[i].farbe == "karo")
                     {
                         return true;
                     }
+                    
                 }
-                else
-                {
-                    return false
-                }
+                
+                
+
             }
-            
-            
+            return false;
+
+
         }
 
         public int status()
@@ -90,4 +91,7 @@ namespace A_Loch
             return "Du hast verkackt";
         }
     }
+
+        
 }
+
