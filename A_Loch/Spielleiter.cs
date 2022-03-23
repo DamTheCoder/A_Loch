@@ -14,6 +14,7 @@ namespace A_Loch
         List<Spieler> reihenfolge;
         List<Hand> spielerkarten;
         Hand anfangshand;
+        string[] farbe = new string[4];
 
 
 
@@ -26,28 +27,40 @@ namespace A_Loch
             spielerliste = new List<Spieler>();
             reihenfolge = new List<Spieler>();
             spielerkarten = new List<Hand>();
+            farbe[0] = "Karo";
+            farbe[1] = "Herz";
+            farbe[2] = "Pik";
+            farbe[3] = "Kreuz";
 
         }
 
-        void spielerhinzufügen(Spieler neuerSpieler)
+        
+        
+           public void spielerhinzufügen(Spieler neuerSpieler)
         {
-            spielerliste.Add(new Spieler("Louise1", spielerkarten[0]));
+            spielerliste.Add(new Spieler("Lousie1", spielerkarten[0]));
             spielerliste.Add(new Spieler("Louise2", spielerkarten[1]));
             spielerliste.Add(new Spieler("Louise3", spielerkarten[2]));
-            spielerliste.Add(new Spieler(Spielername, spielerkarten[3]));
+            spielerliste.Add(new Spieler("Spielername", spielerkarten[3]));
         }
 
         void kartengenerieren()
         {
             anfangshand = new Hand();
-            anfangshand.Add(new Karte(7, "Karo"));
-            anfangshand.Add(new Karte(8, "Karo"));
 
+            for (int f = 0; f < 4; f++)
+            {
+                
+                for (int i = 7; i < 15; i++)
+                {
+                    int u = 0;
+                    String farbeq = farbe[u];
+                    anfangshand.Add(new Karte(i, farbeq));
+                    u++;
 
-
-
-
-
+                }
+            }
+            
 
 
 
@@ -55,27 +68,34 @@ namespace A_Loch
 
         void kartenmischeln()
         {
+            var rnd = new Random();
+            var randomized = anfangshand.OrderBy(item => rnd.Next());
+
+        }
+
+        public void kartenzuteilen()
+        {
+            //pro Spieler eine Liste
+            for (int s= 0; s < 4; s++)
+            {
+                spielerkarten[] = //Listen zuteilen 
+            }
+            return;
+        }
+
+        public void  k7Sucher()
+        {
+           // return Spieler;
+        }
+
+        public void reihenfolge()
+        {
             
         }
 
-        public kartenzuteilen()
+        public void rundenende()
         {
-            //pro Spieler eine Liste
-        }
-
-        public k7Sucher()
-        {
-            return Spieler;
-        }
-
-        public reihenfolge()
-        {
-            return List<Reihenfolge>;
-        }
-
-        public rundenende()
-        {
-            return Meme;
+            //return Meme;
         }
 
         void rangliste()

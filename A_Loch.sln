@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A_Loch", "A_Loch\A_Loch.csproj", "{721ED66A-85F4-47AA-82AF-EE65FC930931}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpielleiterTest", "SpielleiterTest\SpielleiterTest.csproj", "{12A58972-E5BB-4460-809E-DC7DE1BFAAA3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{721ED66A-85F4-47AA-82AF-EE65FC930931}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{721ED66A-85F4-47AA-82AF-EE65FC930931}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{721ED66A-85F4-47AA-82AF-EE65FC930931}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12A58972-E5BB-4460-809E-DC7DE1BFAAA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12A58972-E5BB-4460-809E-DC7DE1BFAAA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12A58972-E5BB-4460-809E-DC7DE1BFAAA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12A58972-E5BB-4460-809E-DC7DE1BFAAA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
