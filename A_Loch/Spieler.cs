@@ -8,29 +8,35 @@ namespace A_Loch
 {
 
 
-    internal class Spieler
+    public class Spieler
     {
         public string Name;
-        public Hand handliste;
+        public Hand spielerliste;
 
-        public Spieler(string n, Hand h1)
+        public Spieler(string n, Hand s1)
         {
-            Name = n; //txtName: die Textbox zum Namen reinschreiben
-            handliste = h1; //Übernimmt Liste von Karten vom Spielleiter
+            Name = n; 
+            spielerliste = s1; //Übernimmt Liste von Karten vom Spielleiter
         }
+
+       
 
         protected void kartensortieren()
         {
-            
+
         }
 
-        public bool weiterspielen()
+        public bool weiterspielen(List<Karte> gewählteKarte)
         {
-            
-            return true;
+            if (gewählteKarte.Count == 0) // Überprüfe ob Karten zum ausspielen gewählt wurden
+            {
+                return false; 
+            }
+            gespielteKartenlöschen(); //Lösche die Ausgewählten karten aus der Hand
+            return true; 
         }
-            
-    
+
+
 
         protected void gespielteKartenlöschen()
         {
@@ -42,9 +48,9 @@ namespace A_Loch
 
         }
 
-        public bool hastdunochkarten()
+        public bool hastdunochkarten(List<Hand> spielerliste)
         {
-            if (handliste.Count > 0)
+            if (spielerliste.Count > 0) //Überprüfe ob ich Karten auf der Hand hab
             {
                 return true;
             }
@@ -55,27 +61,12 @@ namespace A_Loch
 
         }
 
-        public bool isKarosieben()
+
+        public virtual bool isKarosieben()
         {
-            for (int i = 0; i < handliste.Count; i++)
-            {
-            
-                if (handliste[i].wert == 7)
-                {
-                    if (handliste[i].farbe == "Karo")
-                    {
-                        return true;
-                    }
-                    
-                }
-                
-                
-
-            }
             return false;
-
-
         }
+        
 
         public int status()
         {
@@ -93,6 +84,6 @@ namespace A_Loch
         }
     }
 
-        
+
 }
 

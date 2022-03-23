@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace A_Loch
 {
-    internal class Ablage : Kartenliste
+    public class Ablage : Kartenliste
     {
-        
+        public Ablage()
+        { }
     }
 }

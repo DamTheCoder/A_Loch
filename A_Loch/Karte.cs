@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace A_Loch
 {
-    internal class Karte
+    public class Karte
     {
         public int wert;
         public string farbe;
