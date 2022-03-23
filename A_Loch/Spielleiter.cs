@@ -41,24 +41,24 @@ namespace A_Loch
             spielerliste.Add(new Spieler("Lousie1", spielerkarten[0]));
             spielerliste.Add(new Spieler("Louise2", spielerkarten[1]));
             spielerliste.Add(new Spieler("Louise3", spielerkarten[2]));
-            spielerliste.Add(new Spieler("Spielername", spielerkarten[3]));
+            spielerliste.Add(new Spieler("Spielername", spielerkarten[3])); //Bezug zur Textbox noch herstellen
         }
 
         void kartengenerieren()
         {
             anfangshand = new Hand();
 
+            int u = 0;
             for (int f = 0; f < 4; f++)
             {
-                
+
                 for (int i = 7; i < 15; i++)
                 {
-                    int u = 0;
                     String farbeq = farbe[u];
                     anfangshand.Add(new Karte(i, farbeq));
-                    u++;
 
                 }
+                u++;
             }
             
 
@@ -76,20 +76,47 @@ namespace A_Loch
         public void kartenzuteilen()
         {
             //pro Spieler eine Liste
-            for (int s= 0; s < 4; s++)
+            for (int s = 0; s < 4; s++)
             {
-                spielerkarten[] = //Listen zuteilen 
+                
+                for (int k = 0; k < 8; k++)
+                {
+                    spielerkarten[s].Add(anfangshand[0]);
+                    anfangshand.Kartenlegen[0];
+                }//Listen zuteilen 
             }
-            return;
+        }
+
+        public override bool isKarosieben ()
+        {
+            for (int i = 0; i < spielerliste.Count; i++)
+            {
+                
+                if (spielerliste[i] == 7)
+                {
+                    if (spielerliste[i] == farbe[0])
+                    {
+                        return true;
+                    }
+
+                }
+
+
+
+            }
+            return false;
         }
 
         public void  k7Sucher()
         {
+
+
            // return Spieler;
         }
 
-        public void reihenfolge()
+        public void reihenfolgegenerieren()
         {
+            
             
         }
 
