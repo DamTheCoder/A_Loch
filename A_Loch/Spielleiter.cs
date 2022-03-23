@@ -41,24 +41,24 @@ namespace A_Loch
             spielerliste.Add(new Spieler("Lousie1", spielerkarten[0]));
             spielerliste.Add(new Spieler("Louise2", spielerkarten[1]));
             spielerliste.Add(new Spieler("Louise3", spielerkarten[2]));
-            spielerliste.Add(new Spieler("Spielername", spielerkarten[3]));
+            spielerliste.Add(new Spieler("Spielername", spielerkarten[3])); //Bezug zur Textbox noch herstellen
         }
 
         void kartengenerieren()
         {
             anfangshand = new Hand();
 
+            int u = 0;
             for (int f = 0; f < 4; f++)
             {
-                
+
                 for (int i = 7; i < 15; i++)
                 {
-                    int u = 0;
                     String farbeq = farbe[u];
                     anfangshand.Add(new Karte(i, farbeq));
-                    u++;
 
                 }
+                u++;
             }
             
 
@@ -76,20 +76,43 @@ namespace A_Loch
         public void kartenzuteilen()
         {
             //pro Spieler eine Liste
-            for (int s= 0; s < 4; s++)
+            for (int s = 0; s < 4; s++)
             {
-                spielerkarten[] = //Listen zuteilen 
+                
+                for (int k = 0; k < 8; k++)
+                {
+                    spielerkarten[s].Add(anfangshand[0]);
+                    anfangshand.Kartenlegen[0];
+                }//Listen zuteilen 
             }
-            return;
         }
 
-        public void  k7Sucher()
+        public override bool isKarosieben()
         {
-           // return Spieler;
+            bool[] k7 = new bool[4];
+
+            for (int s = 0; s < 4; s++)
+            {
+                for (int i = 0; i < 8; i++)
+                {
+                
+                    if (spielerkarten[s][i] == 7) //Wert 7
+                    {
+                        if (spielerkarten[s][i] == farbe[0]) //Farbe Karo
+                        {
+                        k7[s] = true;
+                        return k7[s];
+                        }
+                    }
+                
+                }
+            }
+            
         }
 
-        public void reihenfolge()
+        public void reihenfolgegenerieren()
         {
+            
             
         }
 

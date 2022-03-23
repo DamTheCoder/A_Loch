@@ -8,43 +8,49 @@ namespace A_Loch
 {
 
 
-    internal class Spieler
+    public class Spieler
     {
         public string Name;
-        public Hand handliste;
+        public Hand spielerliste;
 
-        public Spieler(string n, Hand h1)
+        //Konschtruktor
+        public Spieler(string n, Hand s1)
         {
-            Name = n; //txtName: die Textbox zum Namen reinschreiben
-            handliste = h1; //Übernimmt Liste von Karten vom Spielleiter
+            Name = n; 
+            spielerliste = s1; //Übernimmt Liste von Karten vom Spielleiter
         }
 
-        protected void kartensortieren()
+       
+
+       
+        /// <summary>
+        /// Überprüft ob der spieler Karten gewählt hat und spielt diese ggf. aus ansonsten wird dem Spielleiter gesagt das nix gespielt wird
+        /// </summary>
+        /// <param name="gewählteKarte"> Liste an ausgewählten Karten </param>
+        /// <returns> bool wert ob Karten gespielt werden </returns>
+        public bool weiterspielen(List<Karte> gewählteKarte)
         {
-            
+            if (gewählteKarte.Count == 0) // Überprüfe ob Karten zum ausspielen gewählt wurden
+            {
+                return false; 
+            }
+            gespielteKartenlöschen(); //Lösche die Ausgewählten karten aus der Hand
+            return true; 
         }
 
-        public bool weiterspielen()
+
+
+        
+
+        
+        /// <summary>
+        /// Überprüft ob noch Karten da sind
+        /// </summary>
+        /// <param name="spielerliste"> liste der Karten </param>
+        /// <returns> bool wert ob Karten vorhanden sind </returns>
+        public bool hastdunochkarten(List<Hand> spielerliste)
         {
-            
-            return true;
-        }
-            
-    
-
-        protected void gespielteKartenlöschen()
-        {
-
-        }
-
-        protected void stapeleinsehen()
-        {
-
-        }
-
-        public bool hastdunochkarten()
-        {
-            if (handliste.Count > 0)
+            if (spielerliste.Count > 0) //Überprüfe ob ich Karten auf der Hand hab
             {
                 return true;
             }
@@ -55,28 +61,19 @@ namespace A_Loch
 
         }
 
-        public bool isKarosieben()
+        /// <summary>
+        /// Überprüft ob Karo 7 in der Hand ist
+        /// </summary>
+        /// <returns> bool wert ob Karo 7 da is </returns> 
+        public virtual bool isKarosieben()
         {
-            for (int i = 0; i < handliste.Count; i++)
-            {
-            
-                if (handliste[i].wert == 7)
-                {
-                    if (handliste[i].farbe == "Karo")
-                    {
-                        return true;
-                    }
-                    
-                }
-                
-                
-
-            }
             return false;
-
-
         }
-
+        
+        /// <summary>
+        /// Merkt sich die Platzierung      
+        /// </summary>
+        /// <returns> Die Platzierung als int </returns>
         public int status()
         {
             return 0;
@@ -93,6 +90,6 @@ namespace A_Loch
         }
     }
 
-        
+
 }
 
