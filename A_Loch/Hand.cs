@@ -12,11 +12,18 @@ namespace A_Loch
         {
         
         }
+        /// <summary>
+        /// kartenSortieren sortiert die karten nach Wert, beginnend mit der niedrigsten Karten
+        /// </summary>
+        public void kartenSortieren()
+        {
+            kartenliste.OrderBy(x => x.wert);
+        }
 
         /// <summary>
         /// kartenLegen entfernt gewählte Karte(n) aus der Liste
         /// </summary>
-        /// <param name="gewählteKarte"></param>
+        /// <param name="gewählteKarte">Karte(n), welche vom Spieler ausgewählt wurde(n)</param>
         public void kartenLegen(Karte gewählteKarte) 
         {
             kartenliste.Remove(gewählteKarte);

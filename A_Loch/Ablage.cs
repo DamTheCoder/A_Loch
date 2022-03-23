@@ -8,7 +8,9 @@ namespace A_Loch
 {
     public class Ablage : Kartenliste
     {
-        public Ablage()
-        { }
+        public Ablage() : base()
+        { 
+        
+        }
     }
 }
