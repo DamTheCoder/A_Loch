@@ -6,9 +6,18 @@ using System.Threading.Tasks;
 
 namespace A_Loch
 {
-    internal class Hand : Kartenliste
+    public class Hand : Kartenliste
     {
-        public void Kartenlegen(Karte gewählteKarte)
+        public Hand() : base()  
+        {
+        
+        }
+
+        /// <summary>
+        /// kartenLegen entfernt gewählte Karte(n) aus der Liste
+        /// </summary>
+        /// <param name="gewählteKarte"></param>
+        public void kartenLegen(Karte gewählteKarte) 
         {
             kartenliste.Remove(gewählteKarte);
         }

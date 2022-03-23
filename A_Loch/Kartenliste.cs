@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace A_Loch
 {
-    internal class Kartenliste
+    public class Kartenliste
     {
         public List<Karte> kartenliste;
         public Kartenliste()
-        {}
+        {
+            kartenliste = new List<Karte>();
+        }
 
         public void Add(Karte neueKarte)
         {

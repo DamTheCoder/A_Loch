@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace A_Loch
 {
-    internal class Ausgespielt : Kartenliste
+    public class Ausgespielt : Kartenliste
     {
         public Ausgespielt()
         { }
