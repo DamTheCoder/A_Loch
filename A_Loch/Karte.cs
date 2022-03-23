@@ -16,7 +16,7 @@ namespace A_Loch
         /// <summary>
         /// Erstelle neue Karte mit Wert w und Farbe f
         /// </summary>
-        /// <param name="w">Kartenwert in Zahlen vo 7-14, wobei 11 als Bube, 12 als Dame, 13 als König und 14 als Ass fungiert</param> 
+        /// <param name="w">Kartenwert in Zahlen von 7-14, wobei 11 als Bube, 12 als Dame, 13 als König und 14 als Ass fungiert</param> 
         /// <param name="f">Folgende Farben existieren: Karo, Herz, Pik und Kreuz</param>
         public Karte(int w, string f)
         {
