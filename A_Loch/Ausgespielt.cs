@@ -8,7 +8,9 @@ namespace A_Loch
 {
     public class Ausgespielt : Kartenliste
     {
-        public Ausgespielt()
-        { }
+        public Ausgespielt() : base()   
+        { 
+        
+        }
     }
 }

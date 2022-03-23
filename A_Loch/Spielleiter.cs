@@ -87,31 +87,27 @@ namespace A_Loch
             }
         }
 
-        public override bool isKarosieben ()
+        public override bool isKarosieben()
         {
-            for (int i = 0; i < spielerliste.Count; i++)
+            bool[] k7 = new bool[4];
+
+            for (int s = 0; s < 4; s++)
             {
-                
-                if (spielerliste[i] == 7)
+                for (int i = 0; i < 8; i++)
                 {
-                    if (spielerliste[i] == farbe[0])
+                
+                    if (spielerkarten[s][i] == 7) //Wert 7
                     {
-                        return true;
+                        if (spielerkarten[s][i] == farbe[0]) //Farbe Karo
+                        {
+                        k7[s] = true;
+                        return k7[s];
+                        }
                     }
-
+                
                 }
-
-
-
             }
-            return false;
-        }
-
-        public void  k7Sucher()
-        {
-
-
-           // return Spieler;
+            
         }
 
         public void reihenfolgegenerieren()
