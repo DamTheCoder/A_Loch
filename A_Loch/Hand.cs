@@ -8,6 +8,8 @@ namespace A_Loch
 {
     internal class Hand : Kartenliste
     {
+        public Hand()
+        { }
         public void Kartenlegen(Karte gewählteKarte)
         {
             kartenliste.Remove(gewählteKarte);

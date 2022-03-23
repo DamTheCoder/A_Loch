@@ -8,6 +8,7 @@ namespace A_Loch
 {
     internal class Ausgespielt : Kartenliste
     {
-        
+        public Ausgespielt()
+        { }
     }
 }

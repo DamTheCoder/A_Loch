@@ -8,7 +8,7 @@ namespace A_Loch
 {
     internal class Kartenliste
     {
-        protected List<Karte> kartenliste;
+        public List<Karte> kartenliste;
         public Kartenliste()
         {}
 
