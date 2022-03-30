@@ -37,8 +37,8 @@ namespace A_Loch
             }
             else if(gewählteKarte.Count != 0)
             {
-                //gewählteKarte.CopyTo(Ausgespielt);
-                
+                //Ausgespielt.spielen();
+                return true;
             }
             return true;
             
@@ -71,11 +71,11 @@ namespace A_Loch
         /// Überprüft ob Karo 7 in der Hand ist
         /// </summary>
         /// <returns> bool wert ob Karo 7 da is </returns> 
-        public bool isKarosieben(string farbe)
+        public bool isKarosieben()
         {
             for (int i = 0; i < hand.count(); i++)
                    
-                if (farbe == "Karo")
+                if (hand.getKarte(i).getFarbe() == "Karo" && hand.getKarte(i).getWert()== 7)
                 {
                     return true;
                 }
