@@ -10,19 +10,28 @@ namespace SpielleiterTest
         {
         }
 
-        [Test]
+        /*[Test]
         public void Spieler()
         {
             Hand h1 = new Hand();
             Spieler s1 = new Spieler("Jürgen", h1);
             Assert.Pass();
         }
+        private const int Anzahl = 2;
         [Test]
         public void Hand()
         {
+            Karte p8 = new Karte(8, "Pik");
+            Karte k14 = new Karte(14, "Kreuz");
+            Karte h10 = new Karte(10, "Herz");
             Hand h1 = new Hand();
-            Assert.Pass();
-        }
+            h1.Add(p8);
+            h1.Add(k14);
+            h1.Add(h10);
+            h1.kartenLegen(k14);
+            h1.count();
+            Assert.AreEqual(Anzahl, h1.count());
+        }*/
         private const int wert = 7;
         [Test]
         public void KarteWert()

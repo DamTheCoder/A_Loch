@@ -27,5 +27,13 @@ namespace A_Loch
         {
             
         }
+        public int getWert()
+        {
+            return wert;
+        }
+        public string getFarbe()
+        {
+            return farbe;
+        }
     }
 }
