@@ -73,7 +73,9 @@ namespace A_Loch
 
         }
 
-        public void kartenzuteilen()
+        public Hand GetAnfangshand() => anfangshand;
+
+        public void kartenzuteilen(Hand anfangshand)
         {
             //pro Spieler eine Liste
             for (int s = 0; s < 4; s++)
@@ -81,33 +83,45 @@ namespace A_Loch
                 
                 for (int k = 0; k < 8; k++)
                 {
-                    spielerkarten[s].Add(anfangshand[0]);
-                    anfangshand.Kartenlegen[0];
+                    spielerkarten[s].Add(anfangshand.getKarte(0));
+                    anfangshand.Kartenlegen[anfangshand.getKarte(0)];
                 }//Listen zuteilen 
             }
         }
 
-        public override bool isKarosieben()
+        public bool spielreihenfolge1()
         {
-            bool[] k7 = new bool[4];
-
-            for (int s = 0; s < 4; s++)
+            
+            if (spielerliste[3].isKarosieben() == true)
             {
-                for (int i = 0; i < 8; i++)
-                {
-                
-                    if (spielerkarten[s][i] == 7) //Wert 7
-                    {
-                        if (spielerkarten[s][i] == farbe[0]) //Farbe Karo
-                        {
-                        k7[s] = true;
-                        return k7[s];
-                        }
-                    }
-                
-                }
+                reihenfolge.Add(spielerliste[3]);
+                reihenfolge.Add(spielerliste[0]);
+                reihenfolge.Add(spielerliste[1]);
+                reihenfolge.Add(spielerliste[2]);
+            }
+            else if (spielerliste[0].isKarosieben() == true)
+            {
+                reihenfolge.Add(spielerliste[0]);
+                reihenfolge.Add(spielerliste[1]);
+                reihenfolge.Add(spielerliste[2]);
+                reihenfolge.Add(spielerliste[3]);
+            }
+            else if (spielerliste[1].isKarosieben() == true)
+            {
+                reihenfolge.Add(spielerliste[1]);
+                reihenfolge.Add(spielerliste[2]);
+                reihenfolge.Add(spielerliste[3]);
+                reihenfolge.Add(spielerliste[0]);
+            }
+            else if (spielerliste[2].isKarosieben() == true)
+            {
+                reihenfolge.Add(spielerliste[2]);
+                reihenfolge.Add(spielerliste[3]);
+                reihenfolge.Add(spielerliste[0]);
+                reihenfolge.Add(spielerliste[1]);
             }
             
+            return false;
         }
 
         public void reihenfolgegenerieren()
