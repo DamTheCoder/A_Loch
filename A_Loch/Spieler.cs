@@ -37,8 +37,8 @@ namespace A_Loch
             }
             else if(gewählteKarte.Count != 0)
             {
-                gewählteKarte.CopyTo
-                return true;
+                //gewählteKarte.CopyTo(Ausgespielt);
+                
             }
             return true;
             
@@ -71,15 +71,15 @@ namespace A_Loch
         /// Überprüft ob Karo 7 in der Hand ist
         /// </summary>
         /// <returns> bool wert ob Karo 7 da is </returns> 
-        public virtual bool isKarosieben(string farbe)
+        public bool isKarosieben(string farbe)
         {
             for (int i = 0; i < hand.count(); i++)
-                s3 = false;    
+                   
                 if (farbe == "Karo")
                 {
-                    s3 = true;
+                    return true;
                 }
-            return s3;
+            return false;   
         }
         
         /// <summary>
