@@ -10,7 +10,7 @@ namespace SpielleiterTest
         {
         }
 
-        [Test]
+        /*[Test]
         public void TestSpielleiterKartengenerieren()
         {
             Spielleiter s1 = new Spielleiter();
@@ -30,6 +30,6 @@ namespace SpielleiterTest
 
 
             Assert.Pass();
-        }
+        }*/
     }
 }

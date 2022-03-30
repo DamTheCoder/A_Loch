@@ -29,6 +29,16 @@ namespace A_Loch
             kartenliste.Remove(gewählteKarte);
         }
 
+        public int count()
+        {
+            
+        }
+
+        public Karte getKarte()
+        {
+            return 
+        }
+
         internal object OrderBy(Func<object, int> p)
         {
             throw new NotImplementedException();
