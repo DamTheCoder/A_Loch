@@ -11,13 +11,14 @@ namespace A_Loch
     public class Spieler
     {
         public string Name;
-        public Hand spielerliste;
+        public Hand hand;
+        public bool s3;
 
         //Konschtruktor
-        public Spieler(string n, Hand s1)
+        public Spieler(string n, Hand h1)
         {
             Name = n; 
-            spielerliste = s1; //Übernimmt Liste von Karten vom Spielleiter
+            hand = h1; //Übernimmt Liste von Karten vom Spielleiter
         }
 
        
@@ -34,8 +35,13 @@ namespace A_Loch
             {
                 return false; 
             }
-            gespielteKartenlöschen(); //Lösche die Ausgewählten karten aus der Hand
-            return true; 
+            else if(gewählteKarte.Count != 0)
+            {
+                gewählteKarte.CopyTo
+                return true;
+            }
+            return true;
+            
         }
 
 
@@ -48,9 +54,9 @@ namespace A_Loch
         /// </summary>
         /// <param name="spielerliste"> liste der Karten </param>
         /// <returns> bool wert ob Karten vorhanden sind </returns>
-        public bool hastdunochkarten(List<Hand> spielerliste)
+        public bool hastdunochkarten(List<Hand> kartenliste)
         {
-            if (spielerliste.Count > 0) //Überprüfe ob ich Karten auf der Hand hab
+            if (kartenliste.Count > 0) //Überprüfe ob ich Karten auf der Hand hab
             {
                 return true;
             }
@@ -65,9 +71,15 @@ namespace A_Loch
         /// Überprüft ob Karo 7 in der Hand ist
         /// </summary>
         /// <returns> bool wert ob Karo 7 da is </returns> 
-        public virtual bool isKarosieben()
+        public virtual bool isKarosieben(string farbe)
         {
-            return false;
+            for (int i = 0; i < hand.count(); i++)
+                s3 = false;    
+                if (farbe == "Karo")
+                {
+                    s3 = true;
+                }
+            return s3;
         }
         
         /// <summary>
