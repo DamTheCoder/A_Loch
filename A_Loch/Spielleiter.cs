@@ -73,7 +73,6 @@ namespace A_Loch
 
         }
 
-        public Hand GetAnfangshand() => anfangshand;
 
         public void kartenzuteilen(Hand anfangshand)
         {
@@ -84,7 +83,7 @@ namespace A_Loch
                 for (int k = 0; k < 8; k++)
                 {
                     spielerkarten[s].Add(anfangshand.getKarte(0));
-                    anfangshand.Kartenlegen[anfangshand.getKarte(0)];
+                    anfangshand.kartenLegen(anfangshand.getKarte(0));
                 }//Listen zuteilen 
             }
         }
