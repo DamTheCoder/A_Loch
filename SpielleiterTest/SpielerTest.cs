@@ -36,10 +36,9 @@ namespace SpielleiterTest
         [Test]
         public void KarteWert()
         {
-            Karte k7 = new Karte(7, "Karo");
-            //k7.getWert();
+            Karte k7 = new Karte(7, Kartenfarbe.Karo);
             Assert.AreEqual(7, k7.getWert());
-            Assert.AreEqual(Kartenfarbe.Karo, k7.getFarbe);
+            Assert.AreEqual(Kartenfarbe.Karo, k7.getFarbe());
 
         }
         private const string farbe = "Karo";

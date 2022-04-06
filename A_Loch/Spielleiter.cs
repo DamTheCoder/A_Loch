@@ -10,9 +10,7 @@ namespace A_Loch
     /// Der Spielleiter kümmert sich um .... 
     /// </summary>
     public class Spielleiter
-    {
-        
-
+    { 
         List<Karte> kartenstapel = new List<Karte>();
         List<Spieler> spielerliste;
         List<Spieler> reihenfolge;   
@@ -24,15 +22,11 @@ namespace A_Loch
             reihenfolge = new List<Spieler>();
             spielerkarten = new List<Hand>();
 
-
-
-
         /// <summary>
         /// .... unnötig da default Konstr. beim Kompilieren erzeugt wird
         /// </summary>
         public Spielleiter()
         {
-
         }
 
         
