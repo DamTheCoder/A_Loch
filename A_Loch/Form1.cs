@@ -17,6 +17,19 @@ namespace A_Loch
             InitializeComponent();
         }
 
-        
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picBoxP8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

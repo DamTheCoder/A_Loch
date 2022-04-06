@@ -8,10 +8,14 @@ namespace A_Loch
 {
     public class Ausgespielt : Kartenliste
     {
-    List<Ausgespielt> gespieltstapel;
+    List<Karte> gespieltstapel;
         public Ausgespielt() : base()   
         {
-            
+            gespieltstapel = new List<Karte>();
+        }
+    public void spielen()
+        {
+            //gespieltstapel.Add(gewählteKarte)
         }
     }
 }
