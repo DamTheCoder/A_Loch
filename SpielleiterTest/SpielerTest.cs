@@ -17,7 +17,7 @@ namespace SpielleiterTest
             Spieler s1 = new Spieler("Jürgen", h1);
             Assert.Pass();
         }
-        private const int Anzahl = 2;
+        private const int Anzahl = 2;*/
         [Test]
         public void Hand()
         {
@@ -31,7 +31,7 @@ namespace SpielleiterTest
             h1.kartenLegen(k14);
             h1.count();
             Assert.AreEqual(Anzahl, h1.count());
-        }*/
+        }
         private const int wert = 7;
         [Test]
         public void KarteWert()
