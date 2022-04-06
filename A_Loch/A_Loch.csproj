@@ -59,6 +59,7 @@
     </Compile>
     <Compile Include="Hand.cs" />
     <Compile Include="Karte.cs" />
+    <Compile Include="Kartenfarbe.cs" />
     <Compile Include="Kartenliste.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

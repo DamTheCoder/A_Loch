@@ -32,13 +32,15 @@ namespace SpielleiterTest
             h1.count();
             Assert.AreEqual(Anzahl, h1.count());
         }*/
-        private const int wert = 7;
+        
         [Test]
         public void KarteWert()
         {
             Karte k7 = new Karte(7, "Karo");
-            k7.getWert();
-            Assert.AreEqual(wert, k7.getWert());
+            //k7.getWert();
+            Assert.AreEqual(7, k7.getWert());
+            Assert.AreEqual(Kartenfarbe.Karo, k7.getFarbe);
+
         }
         private const string farbe = "Karo";
         public void KarteFarbe()

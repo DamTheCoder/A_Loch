@@ -10,7 +10,7 @@ namespace A_Loch
     public class Karte
     {
         public int wert;
-        public string farbe;
+        public Kartenfarbe farbe;
          
 
         /// <summary>
@@ -18,10 +18,10 @@ namespace A_Loch
         /// </summary>
         /// <param name="w">Kartenwert in Zahlen von 7-14, wobei 11 als Bube, 12 als Dame, 13 als König und 14 als Ass fungiert</param> 
         /// <param name="f">Folgende Farben existieren: Karo, Herz, Pik und Kreuz</param>
-        public Karte(int w, string f)
+        public Karte(int w, Kartenfarbe kartenfarbe)
         {
             wert = w;   
-            farbe = f; 
+            farbe = kartenfarbe; 
         }
         public void KarteZeichnen(Graphics g)
         {

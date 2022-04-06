@@ -6,36 +6,40 @@ using System.Threading.Tasks;
 
 namespace A_Loch
 {
+    /// <summary>
+    /// Der Spielleiter kümmert sich um .... 
+    /// </summary>
     public class Spielleiter
     {
+        
 
-        List<Karte> kartenstapel;
+        List<Karte> kartenstapel = new List<Karte>();
         List<Spieler> spielerliste;
-        List<Spieler> reihenfolge;
+        List<Spieler> reihenfolge;   
         List<Hand> spielerkarten;
-        Hand anfangshand;
+        Hand anfangshand = null;
         string[] farbe = new string[4];
 
-
-
-
-
-
-        public Spielleiter()
-        {
-            kartenstapel = new List<Karte>();
             spielerliste = new List<Spieler>();
             reihenfolge = new List<Spieler>();
             spielerkarten = new List<Hand>();
-            farbe[0] = "Karo";
-            farbe[1] = "Herz";
-            farbe[2] = "Pik";
-            farbe[3] = "Kreuz";
+
+
+
+
+        /// <summary>
+        /// .... unnötig da default Konstr. beim Kompilieren erzeugt wird
+        /// </summary>
+        public Spielleiter()
+        {
 
         }
 
         
-        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="neuerSpieler"></param>
            public void spielerhinzufügen(Spieler neuerSpieler)
         {
             spielerliste.Add(new Spieler("Lousie1", spielerkarten[0]));
@@ -68,8 +72,8 @@ namespace A_Loch
 
         void kartenmischeln()
         {
-            var rnd = new Random();
-            var randomized = anfangshand.OrderBy(item => rnd.Next());
+            Random rnd = new Random();
+            object randomized = anfangshand.OrderBy(item => rnd.Next());
 
         }
 
