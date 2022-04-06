@@ -13,9 +13,6 @@ namespace A_Loch
         {
             gespieltstapel = new List<Karte>();
         }
-    public void spielen()
-        {
-            //gespieltstapel.Add(gewählteKarte)
-        }
+    
     }
 }

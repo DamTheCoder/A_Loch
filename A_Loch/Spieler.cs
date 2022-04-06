@@ -10,15 +10,15 @@ namespace A_Loch
 
     public class Spieler
     {
-        public string Name;
-        public Hand hand;
-        public bool s3;
+        private string Name;
+        private Hand hand;
+
 
         //Konschtruktor
         public Spieler(string n, Hand h1)
         {
             Name = n; 
-            hand = h1; //Übernimmt Liste von Karten vom Spielleiter
+            hand = h1; 
         }
 
        
@@ -29,19 +29,18 @@ namespace A_Loch
         /// </summary>
         /// <param name="gewählteKarte"> Liste an ausgewählten Karten </param>
         /// <returns> bool wert ob Karten gespielt werden </returns>
-        public bool weiterspielen(List<Karte> gewählteKarte)
+        public List<Karte> weiterspielen(List<Karte> gewählteKarte)
         {
             if (gewählteKarte.Count == 0) // Überprüfe ob Karten zum ausspielen gewählt wurden
             {
-                return false; 
+                return null;
             }
-            else if(gewählteKarte.Count != 0)
+            else if (gewählteKarte.Count != 0)
             {
-                //Ausgespielt.spielen();
-                return true;
+                    return gewählteKarte;   
             }
-            return true;
-            
+
+            return null;
         }
 
 
@@ -54,9 +53,9 @@ namespace A_Loch
         /// </summary>
         /// <param name="spielerliste"> liste der Karten </param>
         /// <returns> bool wert ob Karten vorhanden sind </returns>
-        public bool hastdunochkarten(List<Hand> kartenliste)
+        public bool hastdunochkarten()
         {
-            if (kartenliste.Count > 0) //Überprüfe ob ich Karten auf der Hand hab
+            if (hand.count() > 0) //Überprüfe ob ich Karten auf der Hand hab
             {
                 return true;
             }
@@ -75,7 +74,7 @@ namespace A_Loch
         {
             for (int i = 0; i < hand.count(); i++)
                    
-                if (hand.getKarte(i).getFarbe() == "Karo" && hand.getKarte(i).getWert()== 7)
+                if (hand.getKarte(i).getFarbe() == Kartenfarbe.Karo && hand.getKarte(i).getWert()== Kartenwert.Sieben)//Überprüft Karten auf Karo 7
                 {
                     return true;
                 }
