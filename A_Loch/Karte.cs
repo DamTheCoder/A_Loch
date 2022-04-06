@@ -9,8 +9,10 @@ namespace A_Loch
 {
     public class Karte
     {
-        public int wert;
-        public Kartenfarbe farbe;
+        private Kartenwert wert;
+        private Kartenfarbe farbe;
+        private Image newImage = Image.FromFile();
+
          
 
         /// <summary>
@@ -18,20 +20,20 @@ namespace A_Loch
         /// </summary>
         /// <param name="w">Kartenwert in Zahlen von 7-14, wobei 11 als Bube, 12 als Dame, 13 als König und 14 als Ass fungiert</param> 
         /// <param name="f">Folgende Farben existieren: Karo, Herz, Pik und Kreuz</param>
-        public Karte(int w, Kartenfarbe kartenfarbe)
+        public Karte(Kartenwert kartenwert, Kartenfarbe kartenfarbe)
         {
-            wert = w;   
+            wert = kartenwert;   
             farbe = kartenfarbe; 
         }
         public void KarteZeichnen(Graphics g)
         {
             
         }
-        public int getWert()
+        public Kartenwert getWert()
         {
             return wert;
         }
-        public string getFarbe()
+        public Kartenfarbe getFarbe()
         {
             return farbe;
         }

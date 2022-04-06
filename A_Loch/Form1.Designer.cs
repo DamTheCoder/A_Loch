@@ -523,26 +523,28 @@
         /// <summary>
         /// K=karo, H=herz, P=pik, C=kreuz
         /// </summary>
-        private System.Windows.Forms.PictureBox picBoxH7;
-        private System.Windows.Forms.PictureBox picBoxH13;
+        
+        
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.TextBox txtBoxName;
         private System.Windows.Forms.Button btnEnd;
         private System.Windows.Forms.Button btnRestart;
         private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.PictureBox picBoxK7;
         private System.Windows.Forms.PictureBox picBoxK8;
         private System.Windows.Forms.PictureBox picBoxK9;
         private System.Windows.Forms.PictureBox picBoxK10;
         private System.Windows.Forms.PictureBox picBoxK11;
         private System.Windows.Forms.PictureBox picBoxK12;
+        private System.Windows.Forms.PictureBox picBoxK13;
         private System.Windows.Forms.PictureBox picBoxK14;
-        private System.Windows.Forms.PictureBox picBoxK7;
+        private System.Windows.Forms.PictureBox picBoxH7;
         private System.Windows.Forms.PictureBox picBoxH8;
         private System.Windows.Forms.PictureBox picBoxH9;
         private System.Windows.Forms.PictureBox picBoxH10;
         private System.Windows.Forms.PictureBox picBoxH11;
         private System.Windows.Forms.PictureBox picBoxH12;
-        private System.Windows.Forms.PictureBox picBoxK13;
+        private System.Windows.Forms.PictureBox picBoxH13;
         private System.Windows.Forms.PictureBox picBoxH14;
         private System.Windows.Forms.PictureBox picBoxP7;
         private System.Windows.Forms.PictureBox picBoxP8;

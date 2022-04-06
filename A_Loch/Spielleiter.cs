@@ -12,13 +12,17 @@ namespace A_Loch
     public class Spielleiter
     {
         
-        List<Spielleiter> wegKarten = new List<Spielleiter>();
+
         List<Karte> kartenstapel = new List<Karte>();
         List<Spieler> spielerliste = new List<Spieler>();
         List<Spieler> reihenfolge = new List<Spieler>();  
         List<Hand> spielerkarten = new List<Hand>();
         Hand anfangshand = null;
         string[] farbe = new string[4];
+
+            spielerliste = new List<Spieler>();
+            reihenfolge = new List<Spieler>();
+            spielerkarten = new List<Hand>();
 
 
 
@@ -28,7 +32,6 @@ namespace A_Loch
         /// </summary>
         public Spielleiter()
         {
-
         }
 
         
