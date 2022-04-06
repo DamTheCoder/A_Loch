@@ -3,30 +3,25 @@ using A_Loch;
 
 namespace SpielleiterTest
 {
-    public class Spielertest
+    public class handtest
     {
         [SetUp]
         public void Setup()
         {
         }
-
         [Test]
-        public void Spieler()
+        public void Hand()
         {
-            Hand h1 = new Hand();
             Karte p8 = new Karte(Kartenwert.Acht, Kartenfarbe.Pik);
             Karte k14 = new Karte(Kartenwert.Ass, Kartenfarbe.Kreuz);
             Karte h10 = new Karte(Kartenwert.Zehn, Kartenfarbe.Herz);
-            Karte k7 = new Karte(Kartenwert.Sieben, Kartenfarbe.Karo);
+            Hand h1 = new Hand();
             h1.Add(p8);
             h1.Add(k14);
             h1.Add(h10);
-            h1.Add(k7);
-            Spieler s1 = new Spieler("Jürgen", h1);
-            s1.hastdunochkarten();
-            Assert.AreEqual(true, s1.hastdunochkarten());
-            s1.isKarosieben();
-            Assert.AreEqual(true, s1.isKarosieben());
+            h1.kartenLegen(k14);
+            h1.count();
+            Assert.AreEqual(2, h1.count());
         }
     }
 }
