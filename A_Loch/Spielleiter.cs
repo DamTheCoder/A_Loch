@@ -14,15 +14,13 @@ namespace A_Loch
         
 
         List<Karte> kartenstapel = new List<Karte>();
+        List<Spieler> wegKarten = new List<Spieler>();
         List<Spieler> spielerliste = new List<Spieler>();
         List<Spieler> reihenfolge = new List<Spieler>();  
         List<Hand> spielerkarten = new List<Hand>();
         Hand anfangshand = null;
         string[] farbe = new string[4];
 
-            spielerliste = new List<Spieler>();
-            reihenfolge = new List<Spieler>();
-            spielerkarten = new List<Hand>();
 
 
 
@@ -58,7 +56,7 @@ namespace A_Loch
                 for (int i = 7; i < 15; i++)
                 {
                     String farbeq = farbe[u];
-                    anfangshand.Add(new Karte(i, farbeq));
+                    //anfangshand.Add(new Karte(i, farbeq));
 
                 }
                 u++;
