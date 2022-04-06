@@ -47,25 +47,15 @@ namespace A_Loch
 
         void kartengenerieren()
         {
-            anfangshand = new Hand();
-
-            int u = 0;
-            for (int f = 0; f < 4; f++)
+            foreach (Kartenwert wert in Enum.GetValues(typeof(Kartenwert)))
             {
-
-                for (int i = 7; i < 15; i++)
+                foreach (Kartenfarbe farbe in Enum.GetValues(typeof(Kartenfarbe)))
                 {
-                    String farbeq = farbe[u];
-                    //anfangshand.Add(new Karte(i, farbeq));
-
+                    anfangshand.Add(new Karte(wert, farbe));
                 }
-                u++;
             }
-            
-
-
-
         }
+
 
         void kartenmischeln()
         {
