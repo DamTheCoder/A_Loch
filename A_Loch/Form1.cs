@@ -34,14 +34,16 @@ namespace A_Loch
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            //Karte herzsieben = new Karte(Kartenwert.Sieben, Kartenfarbe.Herz);
+            Karte herzsieben = new Karte(Kartenwert.Sieben, Kartenfarbe.Herz);
             //herzsieben.DrawImage(e, picBoxK11);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             Karte herzsieben = new Karte(Kartenwert.Sieben, Kartenfarbe.Herz);
-            herzsieben.DrawImage(e, picBoxK11);
+            herzsieben.DrawImage(e, panel1, 0);
+            Karte kreuzkoenig = new Karte(Kartenwert.Koenig, Kartenfarbe.Kreuz);
+            kreuzkoenig.DrawImage(e, panel1, 136);
         }
     }
 }

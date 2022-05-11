@@ -45,5 +45,12 @@ namespace A_Loch
         {
             throw new NotImplementedException();
         }
+        public void KarteZeichnen()
+        {
+            foreach(Karte karte in kartenliste)
+            {
+                Karte herzsieben = new Karte(Kartenwert.Sieben, Kartenfarbe.Herz);
+            }
+        }
     }
 }
