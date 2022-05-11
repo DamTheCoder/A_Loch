@@ -8,7 +8,7 @@ namespace A_Loch
 {
     public class Kartenliste
     {
-        private List<Karte> kartenliste;
+        protected List<Karte> kartenliste;
         public Kartenliste()
         {
             kartenliste = new List<Karte>();
