@@ -14,6 +14,7 @@ namespace A_Loch
         private Kartenfarbe farbe;
         private Image newImage;
 
+
          
 
         /// <summary>
@@ -25,7 +26,7 @@ namespace A_Loch
         {
             wert = kartenwert;   
             farbe = kartenfarbe;
-            newImage = Image.FromFile(wert + "-" + farbe + ".jpg");
+            newImage = Image.FromFile("C:/Users/raphael.renner/source/repos/A_Loch/A_Loch/Kartenbilder/" + farbe + "-" + wert + ".jpg");
         }
         public void KarteZeichnen(Graphics g)
         {
@@ -42,7 +43,19 @@ namespace A_Loch
         }
         public void DrawImage(PaintEventArgs e, PictureBox p)
         {
-            //e.Graphics.DrawImage(newImage, p);
+
+            // Create rectangle for displaying image.
+            Rectangle destRect = new Rectangle(140, 0, 130, 181);
+
+            // Create coordinates of rectangle for source image.
+            float x = 0;
+            float y = 0;
+            float width = 130;
+            float height = 181;
+            GraphicsUnit units = GraphicsUnit.Pixel;
+
+            // Draw image to screen.
+            e.Graphics.DrawImage(newImage, destRect, x, y, width, height, units);
         }
 
     }
