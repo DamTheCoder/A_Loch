@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace A_Loch
 {
@@ -11,7 +12,8 @@ namespace A_Loch
     {
         private Kartenwert wert;
         private Kartenfarbe farbe;
-        private Image newImage = Image.FromFile();
+        private Image newImage;
+
 
          
 
@@ -23,7 +25,8 @@ namespace A_Loch
         public Karte(Kartenwert kartenwert, Kartenfarbe kartenfarbe)
         {
             wert = kartenwert;   
-            farbe = kartenfarbe; 
+            farbe = kartenfarbe;
+            newImage = Image.FromFile("C:/Users/raphael.renner/source/repos/A_Loch/A_Loch/Kartenbilder/" + farbe + "-" + wert + ".jpg");
         }
         public void KarteZeichnen(Graphics g)
         {
@@ -33,9 +36,27 @@ namespace A_Loch
         {
             return wert;
         }
+
         public Kartenfarbe getFarbe()
         {
             return farbe;
         }
+        public void DrawImage(PaintEventArgs e, PictureBox p)
+        {
+
+            // Create rectangle for displaying image.
+            Rectangle destRect = new Rectangle(140, 0, 130, 181);
+
+            // Create coordinates of rectangle for source image.
+            float x = 0;
+            float y = 0;
+            float width = 130;
+            float height = 181;
+            GraphicsUnit units = GraphicsUnit.Pixel;
+
+            // Draw image to screen.
+            e.Graphics.DrawImage(newImage, destRect, x, y, width, height, units);
+        }
+
     }
 }

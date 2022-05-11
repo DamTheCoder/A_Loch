@@ -17,7 +17,7 @@ namespace A_Loch
         /// </summary>
         public void kartenSortieren()
         {
-            kartenliste.OrderBy(x => x.wert);
+            kartenliste.OrderBy(x => x.getWert());
         }
 
         /// <summary>
