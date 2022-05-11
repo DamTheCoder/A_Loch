@@ -17,6 +17,7 @@ namespace A_Loch
         List<Spieler> wegKarten = new List<Spieler>();
         List<Spieler> spielerliste = new List<Spieler>();
         List<Spieler> reihenfolge = new List<Spieler>();  
+        List<Spieler> spielreihenfolge = new List<Spieler>();
         List<Hand> spielerkarten = new List<Hand>();
         Hand anfangshand = null;
         string[] farbe = new string[4];
@@ -91,7 +92,7 @@ namespace A_Loch
             }
         }
 
-        public bool spielreihenfolge1()
+        public bool spielreihenfolge1() //Reihenfolge zu Beginn des Spiels
         {
             
             if (spielerliste[3].isKarosieben() == true)
@@ -126,9 +127,19 @@ namespace A_Loch
             return false;
         }
 
-        public void reihenfolgegenerieren()
+        public void spielreihenfolge2() //Reihenfolge während Runde
         {
-            
+            int a = 0;
+            while (a < 3)
+            {
+                if (reihenfolge[0].weiterspielen() == null)
+                {
+
+                }
+
+
+
+            }
             
         }
 

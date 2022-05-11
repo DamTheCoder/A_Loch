@@ -10,8 +10,9 @@ namespace A_Loch
 
     public class Spieler
     {
-        private string Name;
-        private Hand hand;
+        protected string Name;
+        protected Hand hand;
+        public List<Karte> gewählteKarte;
 
 
         //Konschtruktor
@@ -21,7 +22,10 @@ namespace A_Loch
             hand = h1; 
         }
 
-       
+        public void kartenwaehlen(uint x, uint y)
+        {
+            if 
+        }
 
        
         /// <summary>
@@ -29,7 +33,7 @@ namespace A_Loch
         /// </summary>
         /// <param name="gewählteKarte"> Liste an ausgewählten Karten </param>
         /// <returns> bool wert ob Karten gespielt werden </returns>
-        public List<Karte> weiterspielen(List<Karte> gewählteKarte)
+        public List<Karte> weiterspielen()
         {
             if (gewählteKarte.Count == 0) // Überprüfe ob Karten zum ausspielen gewählt wurden
             {
@@ -85,10 +89,7 @@ namespace A_Loch
         /// Merkt sich die Platzierung      
         /// </summary>
         /// <returns> Die Platzierung als int </returns>
-        public int status()
-        {
-            return 0;
-        }
+        
 
         public string kommentar()
         {
@@ -99,6 +100,15 @@ namespace A_Loch
         {
             return "Du hast verkackt";
         }
+        public uint getXwert()
+        {
+            return Karte.X;
+        }
+        public uint getYwert()
+        {
+            return Karte.Y;
+        }
+
     }
 
 
