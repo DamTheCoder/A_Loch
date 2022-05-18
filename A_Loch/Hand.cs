@@ -31,18 +31,6 @@ namespace A_Loch
             kartenliste.Remove(gewählteKarte);
         }
 
-        public int count() 
-            {
-            return kartenliste.Count();
-            }
-
-        public Karte getKarte(int i)
-        {
-            if (i <= this.count())
-                return kartenliste[i]; 
-            else
-                return null;
-        }
         internal object OrderBy(Func<object, int> p)
         {
             throw new NotImplementedException();
@@ -52,9 +40,11 @@ namespace A_Loch
             int x_off = -136;
             foreach(Karte k1 in kartenliste)
             {
-                k1.DrawImage(e,  p, x_off = x_off + 136);
+                k1.DrawImage(e,  p, x_off = x_off + k1.karte_offset);
                                
             }
         }
+
+        
     }
 }

@@ -22,5 +22,17 @@ namespace A_Loch
         {
             kartenliste.Clear();
         }
+
+        public int count()
+        {
+            return kartenliste.Count();
+        }
+        public Karte getKarte(int i)
+        {
+            if (i <= this.count())
+                return kartenliste[i];
+            else
+                return null;
+        }
     }
 }
