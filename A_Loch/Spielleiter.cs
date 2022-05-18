@@ -21,6 +21,7 @@ namespace A_Loch
         List<Spieler> spielreihenfolge = new List<Spieler>();
         List<Hand> spielerkarten = new List<Hand>();
         Hand anfangshand = null;
+        Ausgespielt gespieltstapel = new Ausgespielt();
         string[] farbe = new string[4];
         int letzteKartegelegt;
         int weristdran;
@@ -115,9 +116,9 @@ namespace A_Loch
             {
                 weristdran = 2;
             }
-            
-            return false;
             letzteKartegelegt = weristdran;
+            return false;
+            
         }
 
 
@@ -142,11 +143,11 @@ namespace A_Loch
                     }
                 }
 
-                if (gespieltstapel.Count != 0)
+                if (gespieltstapel.count() != 0)
                 {
 
-                    ablagestapel.Add(gespieltstapel.getKarte(0));
-                    gespieltstapel.kartenLegen(gespieltstapel.getKarte(0));
+                    // ablagestapel.Add(gespieltstapel.getKarte(0));
+                    // gespieltstapel.kartenLegen(gespieltstapel.getKarte(0));
                
                 }
 
