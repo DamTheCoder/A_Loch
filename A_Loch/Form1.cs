@@ -41,7 +41,15 @@ namespace A_Loch
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            
+            //hier soll der Spielleiter zeichnen
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            MouseEventArgs evt = (MouseEventArgs)e;
+            evt.Button == System.Windows.Forms.MouseButtons.Left;
+            //PanelGeklickt(evt.X, evt.Y);
+            panel1.Invalidate();
         }
     }
 }
