@@ -12,6 +12,7 @@ namespace A_Loch
 {
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();
@@ -40,10 +41,15 @@ namespace A_Loch
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            Karte herzsieben = new Karte(Kartenwert.Sieben, Kartenfarbe.Herz);
-            herzsieben.DrawImage(e, panel1, 0);
-            Karte kreuzkoenig = new Karte(Kartenwert.Koenig, Kartenfarbe.Kreuz);
-            kreuzkoenig.DrawImage(e, panel1, 136);
+            //hier soll der Spielleiter zeichnen
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            MouseEventArgs evt = (MouseEventArgs)e;
+            evt.Button == System.Windows.Forms.MouseButtons.Left;
+            //PanelGeklickt(evt.X, evt.Y);
+            panel1.Invalidate();
         }
     }
 }
