@@ -7,11 +7,13 @@ using System.Threading.Tasks;
 namespace A_Loch
 {
     public class Ausgespielt : Kartenliste
+        
     {
-    List<Karte> gespieltstapel;
+    List<Karte> gespieltstapel = new List<Karte>();
+        
         public Ausgespielt() : base()   
         {
-            gespieltstapel = new List<Karte>();
+            
         }
     
     }

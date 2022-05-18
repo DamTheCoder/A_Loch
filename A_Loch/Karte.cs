@@ -13,8 +13,9 @@ namespace A_Loch
         private Kartenwert wert;
         private Kartenfarbe farbe;
         private Image newImage;
-        private const int weite = 130;
-        private const int höhe = 181;
+        private int karte_breite = 130;
+        private int karte_hoehe = 181;
+        public int karte_offset = 136;
 
 
 
@@ -27,12 +28,10 @@ namespace A_Loch
         {
             wert = kartenwert;   
             farbe = kartenfarbe;
-            newImage = Image.FromFile("C:/Users/raphael.renner/source/repos/A_Loch/A_Loch/Kartenbilder/" + farbe + "-" + wert + ".jpg");
+            newImage = Image.FromFile("../../Kartenbilder/" + farbe + "-" + wert + ".jpg");
+
         }
-        public void KarteZeichnen(Graphics g)
-        {
-            
-        }
+        
         public Kartenwert getWert()
         {
             return wert;
@@ -46,18 +45,26 @@ namespace A_Loch
         {
 
             // Create rectangle for displaying image.
-            Rectangle destRect = new Rectangle(x_offset, 0, weite, höhe);
+            Rectangle destRect = new Rectangle(x_offset, 0, karte_breite, karte_hoehe);
 
             // Create coordinates of rectangle for source image.
             float x = 0;
             float y = 0;
-            float width = weite;
-            float height = höhe;
+            float width = karte_breite;
+            float height = karte_hoehe;
             GraphicsUnit units = GraphicsUnit.Pixel;
 
             // Draw image to screen.
             e.Graphics.DrawImage(newImage, destRect, x, y, width, height, units);
         }
-
+        public int getBreite()
+        {
+            return karte_breite;
+        }
+        public int getHoehe()
+        {
+            return karte_hoehe;
+        }
+        
     }
 }

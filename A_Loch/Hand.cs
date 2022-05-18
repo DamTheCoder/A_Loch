@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace A_Loch
 {
-    public class Hand : Kartenliste
+    public class Hand : Kartenliste 
     {
         public Hand() : base()  
         {
@@ -29,28 +31,20 @@ namespace A_Loch
             kartenliste.Remove(gewählteKarte);
         }
 
-        public int count() 
-            {
-            return kartenliste.Count();
-            }
-
-        public Karte getKarte(int i)
-        {
-            if (i <= this.count())
-                return kartenliste[i]; 
-            else
-                return null;
-        }
         internal object OrderBy(Func<object, int> p)
         {
             throw new NotImplementedException();
         }
-        public void KarteZeichnen()
+        public void KarteZeichnen(PaintEventArgs e, Panel p)
         {
-            foreach(Karte karte in kartenliste)
+            int x_off = -136;
+            foreach(Karte k1 in kartenliste)
             {
-                Karte herzsieben = new Karte(Kartenwert.Sieben, Kartenfarbe.Herz);
+                k1.DrawImage(e,  p, x_off = x_off + k1.karte_offset);
+                               
             }
         }
+
+        
     }
 }
