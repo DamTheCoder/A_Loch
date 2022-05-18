@@ -24,11 +24,15 @@ namespace A_Loch
 
         public void kartenwaehlen(uint x, uint y)
         {
-          for(int k = 0; k < 8; k++)//Alle Karten durchgehen
+            
+            for (int k = 0; k < 7; k++)//Alle Karten durchgehen
             {
-                if (x == getXwert() && y == getYwert())//Mauszeiger auf der Karte (bis jetzt nur auf dem Eck muss noch ergänzt werden
+                if (k == 0)
                 {
-
+                    if(x <= Karte.getBreite)
+                    {
+                        gewählteKarte.Add(hand.getKarte(k));
+                    }
                 }
             } 
             
@@ -107,14 +111,7 @@ namespace A_Loch
         {
             return "Du hast verkackt";
         }
-        public uint getXwert()//Ermittelt Ort der Karte
-        {
-            return Karte.x;
-        }
-        public uint getYwert()//Ermittelt Ort der Karte
-        {
-            return Karte.y;
-        }
+        
 
     }
 
