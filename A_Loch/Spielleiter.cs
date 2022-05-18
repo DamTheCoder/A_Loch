@@ -14,6 +14,7 @@ namespace A_Loch
         
 
         List<Karte> kartenstapel = new List<Karte>();
+        List<Ablage> ablagestapel = new List<Ablage>();
         List<Spieler> wegKarten = new List<Spieler>();
         List<Spieler> spielerliste = new List<Spieler>();
         List<Spieler> reihenfolge = new List<Spieler>();  
@@ -21,6 +22,8 @@ namespace A_Loch
         List<Hand> spielerkarten = new List<Hand>();
         Hand anfangshand = null;
         string[] farbe = new string[4];
+        int letzteKartegelegt;
+        int weristdran;
 
 
 
@@ -94,63 +97,66 @@ namespace A_Loch
 
         public bool spielreihenfolge1() //Reihenfolge zu Beginn des Spiels
         {
-            
+
             if (spielerliste[3].isKarosieben() == true)
             {
-                reihenfolge.Add(spielerliste[3]);
-                reihenfolge.Add(spielerliste[0]);
-                reihenfolge.Add(spielerliste[1]);
-                reihenfolge.Add(spielerliste[2]);
+                weristdran = 3;
             }
             else if (spielerliste[0].isKarosieben() == true)
             {
-                reihenfolge.Add(spielerliste[0]);
-                reihenfolge.Add(spielerliste[1]);
-                reihenfolge.Add(spielerliste[2]);
-                reihenfolge.Add(spielerliste[3]);
+                weristdran = 0;
             }
+
             else if (spielerliste[1].isKarosieben() == true)
             {
-                reihenfolge.Add(spielerliste[1]);
-                reihenfolge.Add(spielerliste[2]);
-                reihenfolge.Add(spielerliste[3]);
-                reihenfolge.Add(spielerliste[0]);
+                weristdran = 1;
             }
             else if (spielerliste[2].isKarosieben() == true)
             {
-                reihenfolge.Add(spielerliste[2]);
-                reihenfolge.Add(spielerliste[3]);
-                reihenfolge.Add(spielerliste[0]);
-                reihenfolge.Add(spielerliste[1]);
+                weristdran = 2;
             }
             
             return false;
+            letzteKartegelegt = weristdran;
         }
 
-        public void spielreihenfolge2() //Reihenfolge während Runde
+
+        public void rundespielen() //Reihenfolge während Runde
         {
-            int a = 0;
-            while (a < 3)
+            if (kartenstapel.Count != 32)
             {
-                if (reihenfolge[0].weiterspielen() == null)
+                for (int a = 0; a < 3; a++)
+                {
+                    if (spielerliste[letzteKartegelegt].hastdunochkarten() == true) //Bedingung für Abbruch einfügen
+                    {
+                        spielerliste[letzteKartegelegt].weiterspielen();
+                        letzteKartegelegt++;
+                        letzteKartegelegt = letzteKartegelegt % 4;
+                        a = 0;
+                    }
+                    else
+                    {
+                        letzteKartegelegt++;
+                        letzteKartegelegt = letzteKartegelegt % 4;
+                        a++;
+                    }
+                }
+
+                if (gespieltstapel.Count != 0)
                 {
 
+                    ablagestapel.Add(gespieltstapel.getKarte(0));
+                    gespieltstapel.kartenLegen(gespieltstapel.getKarte(0));
+               
                 }
 
 
-
             }
-            
         }
 
         public void rundenende()
         {
             //return Meme;
-        }
-
-        void rangliste()
-        {
-           
         }
 
 
