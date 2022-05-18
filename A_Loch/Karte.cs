@@ -27,12 +27,10 @@ namespace A_Loch
         {
             wert = kartenwert;   
             farbe = kartenfarbe;
-            newImage = Image.FromFile("C:/Users/raphael.renner/source/repos/A_Loch/A_Loch/Kartenbilder/" + farbe + "-" + wert + ".jpg");
+            newImage = Image.FromFile("C:/Users/raphael.renner/source/repos/A_Loch/A_Loch/bin/Kartenbilder/" + farbe + "-" + wert + ".jpg");
+
         }
-        public void KarteZeichnen(Graphics g)
-        {
-            
-        }
+        
         public Kartenwert getWert()
         {
             return wert;
