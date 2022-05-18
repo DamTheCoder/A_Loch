@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace A_Loch
 {
-    public class Hand : Kartenliste
+    public class Hand : Kartenliste 
     {
         public Hand() : base()  
         {
@@ -44,6 +46,15 @@ namespace A_Loch
         internal object OrderBy(Func<object, int> p)
         {
             throw new NotImplementedException();
+        }
+        public void KarteZeichnen(PaintEventArgs e, Panel p)
+        {
+            int x_off = -136;
+            foreach(Karte k1 in kartenliste)
+            {
+                k1.DrawImage(e,  p, x_off = x_off + 136);
+                               
+            }
         }
     }
 }
