@@ -24,7 +24,7 @@ namespace A_Loch
 
         public void kartenwaehlen(uint x, uint y)
         {
-            //if 
+            if 
         }
 
        
@@ -100,14 +100,14 @@ namespace A_Loch
         {
             return "Du hast verkackt";
         }
-        //public uint getXwert()
-        //{
-            //return Karte.X;
-        //}
-        //public uint getYwert()
-        //{
-            //return Karte.Y;
-        //}
+        public uint getXwert()
+        {
+            return Karte.X;
+        }
+        public uint getYwert()
+        {
+            return Karte.Y;
+        }
 
     }
 
