@@ -14,7 +14,7 @@ namespace SpielleiterTest
         public void KarteWert()
         {
             Karte k7 = new Karte(Kartenwert.Sieben, Kartenfarbe.Karo);
-            Assert.AreEqual(7, k7.getWert());
+            Assert.AreEqual(Kartenwert.Sieben, k7.getWert());
             Assert.AreEqual(Kartenfarbe.Karo, k7.getFarbe());
         }
     }

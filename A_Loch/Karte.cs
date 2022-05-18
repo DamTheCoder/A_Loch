@@ -26,7 +26,7 @@ namespace A_Loch
         {
             wert = kartenwert;   
             farbe = kartenfarbe;
-            newImage = Image.FromFile("C:/Users/raphael.renner/source/repos/A_Loch/A_Loch/Kartenbilder/" + farbe + "-" + wert + ".jpg");
+            newImage = Image.FromFile("H:/A_Loch/A_Loch/A_Loch/Kartenbilder/" + farbe + "-" + wert + ".jpg");
         }
         public void KarteZeichnen(Graphics g)
         {
