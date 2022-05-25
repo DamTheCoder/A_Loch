@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace A_Loch
 {
-
+    /// <summary>
+    /// Spielt die vom menschlichen Spieler gewählten Karten
+    /// @author Vinzenz Grieble
+    /// </summary>
 
     public class Spieler
     {
@@ -65,7 +68,7 @@ namespace A_Loch
         /// <returns> bool wert ob Karten gespielt werden </returns>
         public void weiterspielen()
         {
-            Form1.panel1_Click(); 
+           //Form1.panel1_Click(); 
         }
 
 
