@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace A_Loch
 {
+    /// <summary>
+    /// @author Raphael, Liste für die Karten die ausgespielt wurden
+    /// </summary>
     public class Ausgespielt : Kartenliste
         
     {

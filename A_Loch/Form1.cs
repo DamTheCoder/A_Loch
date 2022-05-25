@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace A_Loch
 {
+    /// <summary>
+    /// @author Raphael + Entwurf
+    /// </summary>
     public partial class Form1 : Form
     {
         Spielleiter s1 = new Spielleiter();

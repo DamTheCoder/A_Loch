@@ -8,6 +8,9 @@ using System.Windows.Forms;
 
 namespace A_Loch
 {
+    /// <summary>
+    /// @author Raphael, alle Informationen für die Karten
+    /// </summary>
     public class Karte
     {
         private Kartenwert wert;
@@ -68,11 +71,11 @@ namespace A_Loch
         {
             return karte_hoehe;
         }
-        public bool getGewaehlt()
+        public bool getGewaehlt()//Gibt zurück ob Karte gewählt ist oder nicht
         {
             return gewaehlt;
         }
-        public void setGewaehlt(bool a)
+        public void setGewaehlt(bool a)//Wählt gewählte Karten ab und nichtgewählte Karten uas
         {
             if(a == false)
             {
