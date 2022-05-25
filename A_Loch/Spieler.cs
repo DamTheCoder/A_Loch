@@ -28,7 +28,7 @@ namespace A_Loch
             
             for (int k = 0; k < 7; k++)//Alle Karten durchgehen
             {
-                if(y <= hand.getKarte(k).karte_offset)
+                if(y >= hand.getKarte(k).karte_offset && y <= hand.getKarte(k).getHoehe() + hand.getKarte(k).karte_offset)
                 {
 
                     
@@ -63,18 +63,9 @@ namespace A_Loch
         /// </summary>
         /// <param name="gewählteKarte"> Liste an ausgewählten Karten </param>
         /// <returns> bool wert ob Karten gespielt werden </returns>
-        public List<Karte> weiterspielen()
+        public void weiterspielen()
         {
-            if (gewählteKarte.Count == 0) // Überprüfe ob Karten zum ausspielen gewählt wurden
-            {
-                return null;
-            }
-            else if (gewählteKarte.Count != 0)
-            {
-                    return gewählteKarte;   
-            }
-
-            return null;
+            Form1.panel1_Click(); 
         }
 
 
