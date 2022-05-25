@@ -42,15 +42,15 @@ namespace A_Loch
         /// 
         /// </summary>
         /// <param name="neuerSpieler"></param>
-           public void spielerhinzufügen(Spieler neuerSpieler)
+           public void spielerhinzufügen(string spielername)
         {
             spielerliste.Add(new Spieler("Lousie1", spielerkarten[0]));
             spielerliste.Add(new Spieler("Louise2", spielerkarten[1]));
             spielerliste.Add(new Spieler("Louise3", spielerkarten[2]));
-            spielerliste.Add(new Spieler("Spielername", spielerkarten[3])); //Bezug zur Textbox noch herstellen
+            spielerliste.Add(new Spieler(spielername, spielerkarten[3])); //Bezug zur Textbox noch herstellen
         }
 
-        void kartengenerieren()
+        public void kartengenerieren()
         {
             foreach (Kartenwert wert in Enum.GetValues(typeof(Kartenwert)))
             {
@@ -62,7 +62,7 @@ namespace A_Loch
         }
 
 
-        void kartenmischeln()
+        public void kartenmischeln()
         {
             Random rnd = new Random();
             object randomized = anfangshand.OrderBy(item => rnd.Next());
@@ -70,7 +70,7 @@ namespace A_Loch
         }
 
 
-        public void kartenzuteilen(Hand anfangshand)
+        public void kartenzuteilen()
         {
             while (anfangshand != null)
             {
@@ -158,6 +158,11 @@ namespace A_Loch
         public void rundenende()
         {
             //return Meme;
+        }
+
+        public Spieler getaktuellerspieler()
+        {
+            return spielerliste[weristdran];
         }
 
 
