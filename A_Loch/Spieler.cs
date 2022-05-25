@@ -24,18 +24,22 @@ namespace A_Loch
 
         public void kartenwaehlen(uint x, uint y)
         {
+
             
             for (int k = 0; k < 7; k++)//Alle Karten durchgehen
             {
                 if (k == 0)
                 {
-                    if(x <= Karte.getBreite)
+                    if(x <= hand.getKarte(0).getBreite())
                     {
                         gewählteKarte.Add(hand.getKarte(k));
                     }
                 }
             } 
             
+
+             
+
         }
 
        
@@ -111,7 +115,10 @@ namespace A_Loch
         {
             return "Du hast verkackt";
         }
+
         
+
+ 
 
     }
 

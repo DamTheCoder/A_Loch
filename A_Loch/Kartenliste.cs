@@ -34,5 +34,17 @@ namespace A_Loch
             else
                 return null;
         }
+        public int CountWert(Kartenwert j)
+        {
+            int y = 0;
+            for (int i = 0; i < kartenliste.Count; i++)
+            {
+                if (this.getKarte(i).getWert() == j)
+                {
+                    y++;
+                }
+            }
+            return y;
+        }
     }
 }
