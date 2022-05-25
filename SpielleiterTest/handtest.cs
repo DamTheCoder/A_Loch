@@ -3,6 +3,10 @@ using A_Loch;
 
 namespace SpielleiterTest
 {
+    /// <summary>
+    /// testet Klasse Hand
+    /// @author Louis
+    /// </summary>
     public class handtest
     {
         [SetUp]
