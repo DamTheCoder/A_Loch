@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace A_Loch
 {
@@ -20,7 +21,7 @@ namespace A_Loch
         List<Spieler> reihenfolge = new List<Spieler>();  
         List<Spieler> spielreihenfolge = new List<Spieler>();
         List<Hand> spielerkarten = new List<Hand>();
-        Hand anfangshand = null;
+        Hand anfangshand = new Hand();
         Ausgespielt gespieltstapel = new Ausgespielt();
         string[] farbe = new string[4];
         int letzteKartegelegt;
@@ -56,6 +57,7 @@ namespace A_Loch
             {
                 foreach (Kartenfarbe farbe in Enum.GetValues(typeof(Kartenfarbe)))
                 {
+                    MessageBox.Show(wert.ToString()+ farbe.ToString());
                     anfangshand.Add(new Karte(wert, farbe));
                 }
             }
