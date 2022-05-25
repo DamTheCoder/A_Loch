@@ -53,8 +53,12 @@ namespace A_Loch
         private void panel1_Click(object sender, EventArgs e)
         {
             MouseEventArgs evt = (MouseEventArgs)e;
-            evt.Button = System.Windows.Forms.MouseButtons.Left;
-            s1.getaktuellerspieler().kartenwaehlen(evt.X, evt.Y)
+            if(evt.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                s1.getaktuellerspieler().kartenwaehlen(evt.X, evt.Y);
+            }
+            
+                
             //panel1_Click(evt.X, evt.Y);
             panel1.Invalidate();
         }
