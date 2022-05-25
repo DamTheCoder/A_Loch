@@ -12,10 +12,13 @@ namespace A_Loch
 {
     public partial class Form1 : Form
     {
-        
+        Spielleiter s1 = new Spielleiter();
         public Form1()
         {
             InitializeComponent();
+            
+
+            
         }
 
         private void pictureBox10_Click(object sender, EventArgs e)
@@ -35,8 +38,11 @@ namespace A_Loch
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            Karte herzsieben = new Karte(Kartenwert.Sieben, Kartenfarbe.Herz);
-            //herzsieben.DrawImage(e, picBoxK11);
+            s1.kartengenerieren();
+            s1.kartenmischeln();
+            s1.kartenzuteilen();
+            s1.spielerhinzufügen(txtBoxName.Text);
+            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -47,9 +53,15 @@ namespace A_Loch
         private void panel1_Click(object sender, EventArgs e)
         {
             MouseEventArgs evt = (MouseEventArgs)e;
-            evt.Button == System.Windows.Forms.MouseButtons.Left;
-            //PanelGeklickt(evt.X, evt.Y);
+            evt.Button = System.Windows.Forms.MouseButtons.Left;
+            s1.getaktuellerspieler().kartenwaehlen(evt.X, evt.Y)
+            //panel1_Click(evt.X, evt.Y);
             panel1.Invalidate();
+        }
+
+        private void txtBoxName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

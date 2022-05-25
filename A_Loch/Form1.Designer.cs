@@ -56,6 +56,7 @@
             this.txtBoxName.Size = new System.Drawing.Size(100, 20);
             this.txtBoxName.TabIndex = 3;
             this.txtBoxName.Text = "Name eingeben";
+            this.txtBoxName.TextChanged += new System.EventHandler(this.txtBoxName_TextChanged);
             // 
             // btnEnd
             // 
