@@ -5,8 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace A_Loch
-{
-    public class Bot : Spieler
+{                                   
+    /// <summary>
+    /// spielt Karten ohne menschliche Hilfe
+    /// @author Louis
+    /// </summary>
+    public class Bot : Spieler  
     {
         public List<Karte> gewaehlteKarten;
         public Bot(string n, Hand h1) : base(n,h1)
@@ -29,11 +33,13 @@ namespace A_Loch
                         else
                         {
                             this.weiterspielen();
+                            return;
                         }
                     }
                 }
             }
             this.weiterspielen();
+            return;
         }
     }
 }
