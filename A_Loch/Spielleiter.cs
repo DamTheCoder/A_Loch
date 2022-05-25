@@ -44,9 +44,9 @@ namespace A_Loch
         /// <param name="neuerSpieler"></param>
            public void spielerhinzufügen(string spielername)
         {
-            spielerliste.Add(new Spieler("Lousie1", spielerkarten[0]));
-            spielerliste.Add(new Spieler("Louise2", spielerkarten[1]));
-            spielerliste.Add(new Spieler("Louise3", spielerkarten[2]));
+            spielerliste.Add(new Bot("Lousie1", spielerkarten[0]));
+            spielerliste.Add(new Bot("Louise2", spielerkarten[1]));
+            spielerliste.Add(new Bot("Louise3", spielerkarten[2]));
             spielerliste.Add(new Spieler(spielername, spielerkarten[3])); //Bezug zur Textbox noch herstellen
         }
 
