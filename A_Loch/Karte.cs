@@ -16,6 +16,8 @@ namespace A_Loch
         private int karte_breite = 130;
         private int karte_hoehe = 181;
         public int karte_offset = 136;
+        public bool gewaehlt;
+
 
 
 
@@ -52,6 +54,7 @@ namespace A_Loch
             float y = 0;
             float width = karte_breite;
             float height = karte_hoehe;
+            gewaehlt = false;
             GraphicsUnit units = GraphicsUnit.Pixel;
 
             // Draw image to screen.
@@ -64,6 +67,21 @@ namespace A_Loch
         public int getHoehe()
         {
             return karte_hoehe;
+        }
+        public bool getGewaehlt()
+        {
+            return gewaehlt;
+        }
+        public void setGewaehlt(bool a)
+        {
+            if(a == false)
+            {
+                gewaehlt=true;
+            }
+            else
+            {
+                gewaehlt=false;
+            }
         }
         
     }

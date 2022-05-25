@@ -22,19 +22,34 @@ namespace A_Loch
             hand = h1; 
         }
 
-        public void kartenwaehlen(uint x, uint y)
+        public void kartenwaehlen(int x, int y) //fügt die Karten auf die der Spieler klickt der Liste gewählte Karte hinzu
         {
 
             
             for (int k = 0; k < 7; k++)//Alle Karten durchgehen
             {
-                if (k == 0)
+                if(y <= hand.getKarte(k).karte_offset)
                 {
-                    if(x <= hand.getKarte(0).getBreite())
-                    {
-                        gewählteKarte.Add(hand.getKarte(k));
+
+                    
+                    if (k == 0)
+                        {
+                            if(x <= hand.getKarte(0).getBreite()) //Liegt der Zeiger auf der ersten Karte?
+                            {
+                                bool a = hand.getKarte(k).getGewaehlt();//Ruft ab ob die karte bereits ausgewaehlt wurde
+                                hand.getKarte(k).setGewaehlt(a);//Ändert den Gewaehltstatus der Karte
+                            }
+                        }
+                        else
+                        {
+                            if(x >= (k - 1) * hand.getKarte(k).getBreite() + (k - 1) * hand.getKarte(k).karte_offset && x<= k * hand.getKarte(k).getBreite() + k * hand.getKarte(k).karte_offset)//Auf welcher Karte liegt der Zeiger
+                            {
+                                bool a = hand.getKarte(k).getGewaehlt();//Ruft ab ob die karte bereits ausgewaehlt wurde
+                                hand.getKarte(k).setGewaehlt(a);//Ändert den Gewaehltstatus der Karte
+                            }
                     }
                 }
+
             } 
             
 
@@ -100,21 +115,9 @@ namespace A_Loch
             return false;   
         }
         
-        /// <summary>
-        /// Merkt sich die Platzierung      
-        /// </summary>
-        /// <returns> Die Platzierung als int </returns>
         
 
-        public string kommentar()
-        {
-            return "Der geht auf die Dörfer";
-        }
-
-        public string ergebnis()
-        {
-            return "Du hast verkackt";
-        }
+      
 
         
 
