@@ -44,7 +44,5 @@ namespace A_Loch
                                
             }
         }
-
-        
     }
 }
