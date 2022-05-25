@@ -8,6 +8,9 @@ using System.Windows.Forms;
 
 namespace A_Loch
 {
+    /// <summary>
+    /// @author Raphael, die Liste "Hand", Kartenhand des Spielers
+    /// </summary>
     public class Hand : Kartenliste 
     {
         public Hand() : base()  

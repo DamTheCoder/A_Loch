@@ -8,6 +8,9 @@ using System.Windows.Forms;
 
 namespace A_Loch
 {
+    /// <summary>
+    /// @author Raphael, alle Informationen für die Karten
+    /// </summary>
     public class Karte
     {
         private Kartenwert wert;

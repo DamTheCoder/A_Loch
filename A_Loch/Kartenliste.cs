@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace A_Loch
 {
+    /// <summary>
+    /// @author Raphael, erstellt die Liste, die alle anderen Karten nutzen
+    /// </summary>
     public class Kartenliste
     {
         protected List<Karte> kartenliste;
